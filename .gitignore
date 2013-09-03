@@ -2,3 +2,28 @@
 *.pot
 *.pyc
 local_settings.py
+
+.DS_Store
+
+# VIM
+.*.swp
+
+# Databse 
+db/
+*.db
+
+# python build
+build/
+
+# Environments
+env/
+venv/
+
+# Installer logs
+pip-log.txt
+
+# Static content
+static/
+
+# Vagrant 
+.vagrant
