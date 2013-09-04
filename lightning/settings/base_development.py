@@ -1,8 +1,8 @@
 #!/usr/bin/env python
+import os
 
 SECRET_KEY = os.environ.get('SECRET_KEY', '$^(o6rr2x#xd-5_(7(@@55!6r9_jmlqblft1k4zmq6hc!w+nm_')
 
-import os
 from .installed_apps import *
 from .s3_utils import *
 
