@@ -6,7 +6,8 @@ then
     sudo apt-get update;
     sudo apt-get -y install htop wget curl multitail;
     sudo apt-get -y install python-pip python-virtualenv python-dev libpq-dev libzmq-dev;
-    sudo apt-get -y install nginx-extras;
+    sudo apt-get -y install libjpeg8 zlib1g;
+    #sudo apt-get -y install nginx-extras;
 
     #sudo pip install uwsgi ipython tornado;
     #sudo pip install pyzmq -b /tmp;
