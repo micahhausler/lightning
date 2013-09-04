@@ -35,7 +35,7 @@ USE_L10N = True
 USE_TZ = True
 
 AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
-AWS_SECRET_ACCESS_KEY = get_env_variable("AWS_SECRET_ACCESS_KEY")
+AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
 
 STATICFILES_STORAGE = 'lightning.settings.s3utils.StaticRootS3BotoStorage'
 STATIC_URL = "https://lightning-static.s3.amazonaws.com/"
