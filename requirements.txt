@@ -5,3 +5,4 @@ pep8==1.4.6
 pyflakes==0.7.3
 
 Django==1.5.2
+PIL==1.1.7
