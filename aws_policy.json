@@ -9,10 +9,10 @@
             "Effect": "Allow",
             "Action": "s3:*",
             "Resource": [
-                "arn:aws:s3:::lightening-static",
-                "arn:aws:s3:::lightening-static/*",
-                "arn:aws:s3:::lightening-media",
-                "arn:aws:s3:::lightening-media/*"
+                "arn:aws:s3:::lightning-static",
+                "arn:aws:s3:::lightning-static/*",
+                "arn:aws:s3:::lightning-media",
+                "arn:aws:s3:::lightning-media/*"
             ]
         }
     ]
