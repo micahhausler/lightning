@@ -1,0 +1,19 @@
+{
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "s3:ListAllMyBuckets",
+            "Resource": "arn:aws:s3:::*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::lightening-static",
+                "arn:aws:s3:::lightening-static/*",
+                "arn:aws:s3:::lightening-media",
+                "arn:aws:s3:::lightening-media/*"
+            ]
+        }
+    ]
+}
