@@ -31,8 +31,11 @@ MEDIA_URL = 'https://lightning-media.s3.amazonaws.com/'
 AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
 
-#MEDIA_ROOT = ''
-#MEDIA_URL = ''
+# The following settings are for uploading media to S3 with django-extensions
+#AWS_BUCKET_NAME = ""
+#MEDIA_ROOT = '/your/media/root'
+#MEDIA_URL = 'http://your.media/url/'
+
 #STATIC_ROOT = ''
 #STATIC_URL = '/static/'
 
