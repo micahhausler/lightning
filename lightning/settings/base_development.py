@@ -1,63 +1,54 @@
 #!/usr/bin/env python
-from .base import *
+
+SECRET_KEY = os.environ.get('SECRET_KEY', '$^(o6rr2x#xd-5_(7(@@55!6r9_jmlqblft1k4zmq6hc!w+nm_')
+
+import os
+from .installed_apps import *
+from .s3_utils import *
+
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
-)
-
+ADMINS = ()
 MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', 
-        'NAME': 'database',
-        # The following settings are not used with sqlite3:
-        #'USER': '',
-        #'PASSWORD': '',
-        #'HOST': '',
-        #'PORT': '',
+        'NAME': 'database.sqlite3',
     }
 }
 
 ALLOWED_HOSTS = []
 
-TIME_ZONE = 'America/Chicago'
+STATICFILES_STORAGE = 'lightning.settings.s3_utils.StaticRootS3BotoStorage'
+STATIC_URL = "https://lightning-static.s3.amazonaws.com/"
 
-LANGUAGE_CODE = 'en-us'
-
-SITE_ID = 1
-
-USE_I18N = True
-USE_L10N = True
-USE_TZ = True
+DEFAULT_FILE_STORAGE = 'lightning.settings.s3_utils.MediaRootS3BotoStorage'
+MEDIA_URL = 'https://lightning-media.s3.amazonaws.com/'
 
 AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
-
-STATICFILES_STORAGE = 'lightning.settings.s3utils.StaticRootS3BotoStorage'
-STATIC_URL = "https://lightning-static.s3.amazonaws.com/"
-
-DEFAULT_FILE_STORAGE = 'lightning.settings.s3utils.MediaRootS3BotoStorage'
-MEDIA_URL = 'https://lightning-media.s3.amazonaws.com/'
 
 #MEDIA_ROOT = ''
 #MEDIA_URL = ''
 #STATIC_ROOT = ''
 #STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-)
+STATICFILES_DIRS = ()
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
-SECRET_KEY = '$^(o6rr2x#xd-5_(7(@@55!6r9_jmlqblft1k4zmq6hc!w+nm_'
+TIME_ZONE = 'America/Chicago'
+LANGUAGE_CODE = 'en-us'
+SITE_ID = 1
+USE_I18N = True
+USE_L10N = True
+USE_TZ = True
 
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',

@@ -13,7 +13,6 @@ DJANGO_APPS = (
 
 UNIVERSE_APPS = (
     'django_extensions',
-    # Storages here
     'storages',
 )
 
