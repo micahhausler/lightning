@@ -11,6 +11,8 @@ local_settings.py
 # Databse 
 db/
 *.db
+*.sqlite
+*.sqlite3
 
 # python build
 build/
