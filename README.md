@@ -23,6 +23,6 @@ To install:
 
 Author
 ------
-@micahhausler
-micah.hausler@akimbo.io
+@micahhausler  
+micah.hausler@akimbo.io  
 Sysadmin at Ambition - tryambition.com
